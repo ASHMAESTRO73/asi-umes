@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription Convention 2027 — ASI UMES</title>
+    <meta
+      name="description"
+      content="Inscrivez-vous à la Convention Régionale ASI UMES 2027 à Jacqueville, Abidjan. 14-17 Mai 2027."
+    />
+    <link rel="stylesheet" href="../components/global.css" />
+    <link rel="stylesheet" href="inscription-convention-2027.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <!-- ======================== -->
+      <!-- 1. BANNER DYNAMIQUE      -->
+      <!-- ======================== -->
+      <section class="insc-hero">
+        <div class="insc-hero__bg">
+          <img
+            src="../assets/images/hotel1.jpg"
+            alt="Hôtel Prunel"
+            loading="eager"
+          />
+        </div>
+        <div class="insc-hero__overlay"></div>
+        <div class="container insc-hero__inner">
+          <div class="insc-hero__left">
+            <span class="insc-hero__badge reveal">Inscriptions Ouvertes</span>
+            <h1 class="insc-hero__title reveal">Convention ASI UMES 2027</h1>
+            <p class="insc-hero__venue reveal">
+              📍 Hôtel Prunel, Jacqueville – Abidjan
+            </p>
+          </div>
+          <div class="insc-hero__countdown reveal">
+            <p class="insc-hero__cd-label">
+              Clôture des inscriptions (30 Mars 2027) :
+            </p>
+            <div class="countdown" id="countdownRegistration">
+              <div class="countdown__block">
+                <span class="countdown__num" id="cd-days">--</span
+                ><span class="countdown__unit">Jours</span>
+              </div>
+              <div class="countdown__block">
+                <span class="countdown__num" id="cd-hours">--</span
+                ><span class="countdown__unit">Heures</span>
+              </div>
+              <div class="countdown__block">
+                <span class="countdown__num" id="cd-mins">--</span
+                ><span class="countdown__unit">Min</span>
+              </div>
+              <div class="countdown__block">
+                <span class="countdown__num" id="cd-secs">--</span
+                ><span class="countdown__unit">Sec</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== -->
+      <!-- 2. INFOS + CARTES        -->
+      <!-- ======================== -->
+      <section class="insc-infos">
+        <div class="container">
+          <div class="insc-infos__grid">
+            <!-- Carte 1 : Période -->
+            <div class="insc-card reveal">
+              <div class="insc-card__icon insc-card__icon--blue">📅</div>
+              <h3>Période d'inscription</h3>
+              <p>
+                Du <strong class="text-blue">15 Novembre 2026</strong><br />au
+                <strong class="text-blue">30 Mars 2027</strong>
+              </p>
+            </div>
+
+            <!-- Carte 2 : Frais -->
+            <div class="insc-card insc-card--gold reveal">
+              <div class="insc-card__icon insc-card__icon--gold">💳</div>
+              <h3>Frais de participation</h3>
+              <div class="insc-card__amount">45 000 FCFA</div>
+              <p>Équivalent : 68 € / 75 $ US</p>
+            </div>
+
+            <!-- Carte 3 : Inclus -->
+            <div class="insc-card reveal">
+              <div class="insc-card__icon insc-card__icon--blue">🛡️</div>
+              <h3>Inclus dans les frais</h3>
+              <ul>
+                <li>• Accès complet aux conférences &amp; ateliers</li>
+                <li>• Kit du congressiste</li>
+                <li>• Déjeuners et pauses-café</li>
+              </ul>
+            </div>
+
+            <!-- Carte 4 : Stand Exposition -->
+            <div class="insc-card reveal">
+              <div class="insc-card__icon insc-card__icon--gold">🎪</div>
+              <h3>Stand d'Exposition</h3>
+              <div class="insc-card__amount insc-card__amount--sm">
+                30 000 FCFA
+              </div>
+              <p>
+                Présentez vos produits et services lors de la convention.
+                Visibilité garantie auprès de tous les délégués.
+              </p>
+            </div>
+
+            <!-- Carte 5 : Promotion Express -->
+            <div class="insc-card reveal">
+              <div class="insc-card__icon insc-card__icon--gold">🎤</div>
+              <h3>Promotion Express</h3>
+              <div class="insc-card__amount insc-card__amount--sm">
+                50 000 FCFA
+              </div>
+              <p>
+                3 minutes pour promouvoir vos produits et services devant
+                l'ensemble des participants.
+              </p>
+            </div>
+
+            <!-- Carte 6 : Visites Touristiques -->
+            <div class="insc-card reveal">
+              <div class="insc-card__icon insc-card__icon--blue">🌴</div>
+              <h3>Visites Touristiques</h3>
+              <p>Découvrez la Côte d'Ivoire ! Au choix :</p>
+              <ul>
+                <li>• Visite de la ville de <strong>San Pédro</strong></li>
+                <li>
+                  • Visite de <strong>Yamoussoukro</strong> (la Grande
+                  Basilique)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== -->
+      <!-- 3. TARIFS HÉBERGEMENT    -->
+      <!-- ======================== -->
+      <section class="insc-lodging">
+        <div class="container">
+          <div class="insc-lodging__box reveal">
+            <div class="insc-lodging__header">
+              <h2>Tarifs d'hébergement (par nuitée)</h2>
+              <p>
+                Chambres disponibles à l'Hôtel Prunel et dans d'autres
+                structures partenaires à proximité.
+              </p>
+            </div>
+            <div class="insc-lodging__grid">
+              <div class="insc-lodging__item">
+                <p class="insc-lodging__type">Ventilée</p>
+                <p class="insc-lodging__price">7 000 – 8 000 F</p>
+                <p class="insc-lodging__unit">/ nuit</p>
+              </div>
+              <div class="insc-lodging__item insc-lodging__item--gold">
+                <p class="insc-lodging__type">Standard clim.</p>
+                <p class="insc-lodging__price">10 000 – 25 000 F</p>
+                <p class="insc-lodging__unit">/ nuit</p>
+              </div>
+              <div class="insc-lodging__item">
+                <p class="insc-lodging__type">Suite</p>
+                <p class="insc-lodging__price">35 000 – 60 000 F</p>
+                <p class="insc-lodging__unit">/ nuit</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== -->
+      <!-- 4. FORMULAIRE            -->
+      <!-- ======================== -->
+      <section class="insc-form-section">
+        <div class="container">
+          <div class="insc-form-card reveal">
+            <div class="insc-form-card__header">
+              <h2>Formulaire d'Inscription</h2>
+              <p>Veuillez remplir tous les champs obligatoires (*)</p>
+            </div>
+
+            <form
+              id="inscriptionForm"
+              class="insc-form"
+              action="../envoyer-inscription.php"
+              method="POST"
+            >
+              <!-- Identité -->
+              <div class="insc-form__group">
+                <label>Nom *</label>
+                <input
+                  type="text"
+                  name="nom"
+                  required
+                  placeholder="Votre nom"
+                />
+              </div>
+              <div class="insc-form__group">
+                <label>Prénoms *</label>
+                <input
+                  type="text"
+                  name="prenoms"
+                  required
+                  placeholder="Vos prénoms"
+                />
+              </div>
+              <div class="insc-form__group">
+                <label>Profession *</label>
+                <input
+                  type="text"
+                  name="profession"
+                  required
+                  placeholder="Ex: Entrepreneur, Médecin, Cadre..."
+                />
+              </div>
+              <div class="insc-form__group">
+                <label>E-mail *</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="exemple@email.com"
+                />
+              </div>
+              <div class="insc-form__group">
+                <label>Téléphone / WhatsApp *</label>
+                <input
+                  type="tel"
+                  name="telephone"
+                  required
+                  placeholder="+225 00 00 00 00 00"
+                />
+              </div>
+              <div class="insc-form__group">
+                <label>Pays de provenance *</label>
+                <select name="pays" required>
+                  <option value="">Sélectionnez votre pays</option>
+                  <option>Bénin</option>
+                  <option>Burkina Faso</option>
+                  <option>Côte d'Ivoire</option>
+                  <option>Niger</option>
+                  <option>Togo</option>
+                  <option>Autre (Hors zone UMES)</option>
+                </select>
+              </div>
+              <div class="insc-form__group">
+                <label>Chapitre ASI UMES *</label>
+                <select name="chapitre" required>
+                  <option value="">Sélectionnez votre chapitre</option>
+                  <option>ASI Bénin</option>
+                  <option>ASI Burkina Faso</option>
+                  <option>ASI Côte d'Ivoire</option>
+                  <option>ASI Niger</option>
+                  <option>ASI Togo</option>
+                  <option>Je ne suis pas encore membre d'un chapitre</option>
+                </select>
+              </div>
+              <div class="insc-form__group">
+                <label>Statut *</label>
+                <select name="statut" required>
+                  <option value="Membre ASI">Membre ASI</option>
+                  <option value="Invité">Invité</option>
+                  <option value="Visiteur">Visiteur</option>
+                  <option value="Autre">Autre</option>
+                </select>
+              </div>
+
+              <!-- Alimentation -->
+              <div class="insc-form__group insc-form__group--full">
+                <label>Option d'alimentation *</label>
+                <select name="alimentation" required>
+                  <option value="">
+                    Sélectionnez votre régime alimentaire
+                  </option>
+                  <option value="standard">Alimentation standard</option>
+                  <option value="vegetarien">Végétarien</option>
+                  <option value="vegan">Végétalien (vegan)</option>
+                  <option value="sans-gluten">Sans gluten</option>
+                  <option value="autre">
+                    Autre régime (à préciser au secrétariat)
+                  </option>
+                </select>
+              </div>
+
+              <!-- Hébergement -->
+              <div
+                class="insc-form__group insc-form__group--full insc-form__group--highlight"
+              >
+                <label
+                  >🛏️ Option d'Hébergement souhaitée à l'Hôtel Prunel *</label
+                >
+                <select name="hebergement" required>
+                  <option value="">
+                    Sélectionnez une catégorie de chambre
+                  </option>
+                  <option value="ventilée">
+                    Chambre Ventilée (7 000 – 8 000 FCFA / nuit)
+                  </option>
+                  <option value="climatisée">
+                    Chambre Standard Climatisée (10 000 – 25 000 FCFA / nuit)
+                  </option>
+                  <option value="suite">
+                    Suite Luxueuse (35 000 – 60 000 FCFA / nuit)
+                  </option>
+                  <option value="autonome">
+                    Je gère mon propre hébergement à l'extérieur
+                  </option>
+                </select>
+                <p class="insc-form__hint">
+                  Le choix définitif du numéro de chambre et le règlement se
+                  feront lors de la confirmation avec le secrétariat.
+                </p>
+              </div>
+
+              <!-- Options supplémentaires -->
+              <div
+                class="insc-form__group insc-form__group--full insc-form__group--options"
+              >
+                <label>🎯 Options supplémentaires (facultatives)</label>
+                <div class="insc-options">
+                  <label class="insc-option">
+                    <input
+                      type="checkbox"
+                      name="options[]"
+                      value="Stand Expo (30 000 FCFA)"
+                    />
+                    <span class="insc-option__text">
+                      <strong>🎪 Stand d'Exposition</strong> — 30 000 FCFA<br />
+                      <small
+                        >Présentez vos produits et services lors de la
+                        convention</small
+                      >
+                    </span>
+                  </label>
+                  <label class="insc-option">
+                    <input
+                      type="checkbox"
+                      name="options[]"
+                      value="Promo Express 3 min (50 000 FCFA)"
+                    />
+                    <span class="insc-option__text">
+                      <strong>🎤 Promotion Express</strong> — 50 000 FCFA<br />
+                      <small
+                        >3 minutes pour promouvoir vos produits devant tous les
+                        délégués</small
+                      >
+                    </span>
+                  </label>
+                  <label class="insc-option">
+                    <input
+                      type="checkbox"
+                      name="options[]"
+                      value="Visite villes côtières"
+                    />
+                    <span class="insc-option__text">
+                      <strong>🌴 Visite des villes côtières</strong><br />
+                      <small
+                        >Découvrez les villes côtières de la Côte
+                        d'Ivoire</small
+                      >
+                    </span>
+                  </label>
+                  <label class="insc-option">
+                    <input
+                      type="checkbox"
+                      name="options[]"
+                      value="Visite Yamoussoukro"
+                    />
+                    <span class="insc-option__text">
+                      <strong>⛪ Visite de Yamoussoukro</strong><br />
+                      <small>La Grande Basilique Notre-Dame de la Paix</small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- RGPD -->
+              <div class="insc-form__group insc-form__group--full">
+                <label class="insc-form__checkbox">
+                  <input type="checkbox" required />
+                  <span
+                    >J'accepte que mes données soient traitées pour la gestion
+                    de la convention conformément aux règles de confidentialité.
+                    *</span
+                  >
+                </label>
+              </div>
+
+              <!-- Submit -->
+              <div class="insc-form__group insc-form__group--full">
+                <button type="submit" class="insc-form__submit">
+                  CONFIRMER MON INSCRIPTION
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== -->
+      <!-- 5. ÉCRAN CONFIRMATION    -->
+      <!-- ======================== -->
+      <section class="insc-success" id="inscSuccess" style="display: none">
+        <div class="container">
+          <div class="insc-success__card">
+            <div class="insc-success__icon">✅</div>
+            <h1>Inscription Reçue !</h1>
+            <p>
+              Merci pour votre pré-inscription à la Convention ASI UMES 2027. Un
+              e-mail de confirmation contenant les détails de votre réservation
+              et les modalités de paiement vous a été envoyé.
+            </p>
+            <button id="backToForm" class="btn btn--blue btn--lg">
+              Retour au formulaire
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../components/component-loader.js"></script>
+    <script src="inscription-convention-2027.js"></script>
+  </body>
+</html>

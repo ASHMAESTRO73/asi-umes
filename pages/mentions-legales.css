@@ -1,0 +1,191 @@
+/* ============================================
+   MENTIONS LÉGALES & CONFIDENTIALITÉ — ASI UMES
+   ============================================ */
+
+/* ---------- HERO ---------- */
+.ml-hero {
+  position: relative;
+  min-height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #192569 0%, #233287 60%, #1a1a4e 100%);
+  padding: 120px 20px 60px;
+}
+
+.ml-hero__content {
+  text-align: center;
+  max-width: 700px;
+}
+
+.ml-hero__title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 900;
+  color: #ffffff !important;
+  margin: 0 0 14px;
+  line-height: 1.2;
+}
+
+.ml-hero__text {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.65) !important;
+  margin: 0;
+}
+
+.ml-hero * {
+  color: #ffffff !important;
+}
+
+/* ---------- CONTENU ---------- */
+.ml-content {
+  background: #f8f9fc;
+  padding: 70px 20px 90px;
+}
+
+.ml-content .container {
+  max-width: 860px;
+}
+
+/* ---------- BLOCS ---------- */
+.ml-block {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 36px 40px;
+  margin-bottom: 28px;
+  box-shadow: 0 2px 16px rgba(35, 50, 135, 0.05);
+  border: 1px solid rgba(35, 50, 135, 0.06);
+}
+
+.ml-block__title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #233287;
+  margin: 0 0 20px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #daa520;
+  display: inline-block;
+}
+
+.ml-block__body {
+  font-size: 0.98rem;
+  color: #444;
+  line-height: 1.75;
+}
+
+.ml-block__body p {
+  margin: 0 0 14px;
+}
+
+.ml-block__body p:last-child {
+  margin-bottom: 0;
+}
+
+.ml-block__body a {
+  color: #233287;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.25s ease;
+}
+
+.ml-block__body a:hover {
+  color: #daa520;
+}
+
+/* ---------- TABLE ---------- */
+.ml-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+
+.ml-table tr {
+  border-bottom: 1px solid #eee;
+}
+
+.ml-table tr:last-child {
+  border-bottom: none;
+}
+
+.ml-table td {
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: #444;
+  vertical-align: top;
+}
+
+.ml-table__label {
+  font-weight: 700;
+  color: #233287;
+  white-space: nowrap;
+  width: 200px;
+}
+
+.ml-table a {
+  color: #233287;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.ml-table a:hover {
+  color: #daa520;
+}
+
+/* ---------- LISTE ---------- */
+.ml-list {
+  padding-left: 20px;
+  margin: 14px 0;
+}
+
+.ml-list li {
+  padding: 6px 0;
+  line-height: 1.7;
+  color: #444;
+}
+
+.ml-list li strong {
+  color: #1e293b;
+}
+
+/* ---------- REVEAL ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  .ml-hero {
+    min-height: 28vh;
+    padding: 100px 16px 50px;
+  }
+
+  .ml-block {
+    padding: 26px 22px;
+  }
+
+  .ml-table__label {
+    width: auto;
+    display: block;
+    padding-bottom: 2px;
+  }
+
+  .ml-table td {
+    display: block;
+    padding: 6px 12px;
+  }
+
+  .ml-table tr {
+    display: block;
+    padding: 10px 0;
+  }
+}

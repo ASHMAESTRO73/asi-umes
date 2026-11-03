@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#233287" />
+    <meta
+      name="description"
+      content="ASI UMES — Union Mission de l'Est du Sahel. Association de laïcs adventistes partageant le Christ sur le marché du travail au Bénin, Burkina Faso, Côte d'Ivoire, Niger et Togo."
+    />
+    <meta
+      name="keywords"
+      content="ASI UMES, adventiste, laïcs, mission, Afrique de l'Ouest, convention, Jacqueville"
+    />
+
+    <meta
+      property="og:title"
+      content="ASI UMES — Partager Christ dans nos Affaires & Professions"
+    />
+    <meta
+      property="og:description"
+      content="Union Mission de l'Est du Sahel — Bénin · Burkina Faso · Côte d'Ivoire · Niger · Togo"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <title>ASI UMES — Accueil | Union Mission de l'Est du Sahel</title>
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%23233287'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Segoe UI' font-weight='800' font-size='16' fill='%23FFFFFF'%3EASI%3C/text%3E%3C/svg%3E"
+    />
+
+    <link rel="stylesheet" href="components/global.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <main id="main-content">
+      <!-- ========== HERO CARROUSEL ========== -->
+      <section class="hero-carousel" id="heroCarousel">
+        <!-- Slide 1 : Convention 2027 -->
+        <div class="hero-slide" data-slide="1">
+          <img
+            class="hero-slide__bg-img"
+            src="assets/images/hero2.jpeg"
+            alt="Convention 2027"
+          />
+          <div class="hero-slide__overlay hero-slide__overlay--gold"></div>
+          <div class="hero-slide__content">
+            <span class="hero-slide__badge hero-slide__badge--gold"
+              >📅 14 – 17 Mai 2027</span
+            >
+            <h1 class="hero-slide__title">GRANDE CONVENTION 2027</h1>
+            <p class="hero-slide__subtitle">
+              Hôtel Prunel — Jacqueville, Abidjan 🇨🇮
+            </p>
+            <p class="hero-slide__text">
+              Rejoignez des centaines de laïcs adventistes de 5 pays pour 4
+              jours de communion, formation et networking. Inscriptions ouvertes
+              du 15 novembre 2026 au 30 mars 2027.
+            </p>
+            <div class="hero-slide__btns">
+              <a
+                href="pages/inscription-convention-2027.html"
+                class="btn btn--gold btn--pulse"
+                >✍️ S'inscrire maintenant</a
+              >
+              <a href="pages/conventions.html" class="btn btn--outline-white"
+                >En savoir plus</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 : Institutionnel -->
+        <div class="hero-slide hero-slide--active" data-slide="0">
+          <img
+            class="hero-slide__bg-img"
+            src="assets/images/hero1.jpg"
+            alt="ASI UMES"
+          />
+          <div class="hero-slide__overlay"></div>
+          <div class="hero-slide__content">
+            <span class="hero-slide__badge"
+              >Union Mission de l'Est du Sahel</span
+            >
+            <h1 class="hero-slide__title">ASI UMES</h1>
+            <p class="hero-slide__subtitle">
+              Adventist Laymen's Services and Industries
+            </p>
+            <p class="hero-slide__text">
+              Cadres, entrepreneurs, artisans et professions libérales
+              adventistes au service de l'Église et du développement
+              communautaire en Afrique de l'Ouest.
+            </p>
+            <div class="hero-slide__btns">
+              <a href="pages/qui-sommes-nous.html" class="btn btn--gold"
+                >Découvrir ASI UMES</a
+              >
+              <a href="pages/conventions.html" class="btn btn--outline-white"
+                >Nos Conventions</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Contrôles -->
+        <button
+          class="hero-carousel__arrow hero-carousel__arrow--prev"
+          id="heroPrev"
+          aria-label="Slide précédente"
+        >
+          ‹
+        </button>
+        <button
+          class="hero-carousel__arrow hero-carousel__arrow--next"
+          id="heroNext"
+          aria-label="Slide suivante"
+        >
+          ›
+        </button>
+
+        <div class="hero-carousel__dots">
+          <button
+            class="hero-carousel__dot hero-carousel__dot--active"
+            data-dot="0"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            class="hero-carousel__dot"
+            data-dot="1"
+            aria-label="Slide 2"
+          ></button>
+        </div>
+      </section>
+
+      <!-- ========== BANDEAU COUNTDOWN CONVENTION 2027 ========== -->
+      <div class="countdown-bar" id="countdownBar">
+        <div class="countdown-bar__inner">
+          <div class="countdown-bar__left">
+            <span class="countdown-bar__icon">📅</span>
+            <span class="countdown-bar__title">CONVENTION 2027</span>
+            <span class="countdown-bar__sep">|</span>
+            <span class="countdown-bar__date"
+              >14 – 17 Mai · Jacqueville, Côte d'Ivoire</span
+            >
+          </div>
+          <div class="countdown-bar__timer" id="countdownTimer">
+            <div class="countdown-bar__unit">
+              <span class="countdown-bar__num" id="cdDays">---</span>
+              <span class="countdown-bar__label">J</span>
+            </div>
+            <span class="countdown-bar__colon">:</span>
+            <div class="countdown-bar__unit">
+              <span class="countdown-bar__num" id="cdHours">--</span>
+              <span class="countdown-bar__label">H</span>
+            </div>
+            <span class="countdown-bar__colon">:</span>
+            <div class="countdown-bar__unit">
+              <span class="countdown-bar__num" id="cdMins">--</span>
+              <span class="countdown-bar__label">M</span>
+            </div>
+            <span class="countdown-bar__colon">:</span>
+            <div class="countdown-bar__unit">
+              <span class="countdown-bar__num" id="cdSecs">--</span>
+              <span class="countdown-bar__label">S</span>
+            </div>
+          </div>
+          <a
+            href="pages/inscription-convention-2027.html"
+            class="countdown-bar__btn"
+            >S'inscrire →</a
+          >
+        </div>
+      </div>
+      <!-- ============================================================
+         2. SECTION MISSION & VISION
+         ============================================================ -->
+      <section class="section section--alt" id="mission">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-header__label">Notre Identité</span>
+            <h2 class="section-header__title">Ce qui nous anime</h2>
+          </div>
+
+          <div class="grid grid--2 mv-grid">
+            <!-- Carte Mission -->
+            <article class="mv-card reveal">
+              <div class="mv-card__image">
+                <img
+                  src="assets/images/mission.jpg"
+                  alt="Mission ASI UMES"
+                  loading="lazy"
+                />
+              </div>
+              <div class="mv-card__body">
+                <h3 class="mv-card__title">
+                  <span class="mv-card__dot mv-card__dot--gold"></span>
+                  Notre Mission
+                </h3>
+                <p class="mv-card__text">
+                  ASI rassemble des membres de l'Église Adventiste du Septième
+                  Jour qui exercent dans le monde des affaires et des
+                  professions libérales, ainsi que des ministères de soutien.
+                  Notre devise :
+                  <strong class="text-accent"
+                    >« Partager Christ sur le marché »</strong
+                  >.
+                </p>
+                <a href="pages/qui-sommes-nous.html" class="mv-card__link">
+                  Lire la mission complète →
+                </a>
+              </div>
+            </article>
+
+            <!-- Carte Vision -->
+            <article class="mv-card reveal reveal-delay-2">
+              <div class="mv-card__image">
+                <img
+                  src="assets/images/vision.jpg"
+                  alt="Vision ASI UMES"
+                  loading="lazy"
+                />
+              </div>
+              <div class="mv-card__body">
+                <h3 class="mv-card__title">
+                  <span class="mv-card__dot mv-card__dot--blue"></span>
+                  Notre Vision
+                </h3>
+                <p class="mv-card__text">
+                  Être reconnus pour notre honnêteté inébranlable dans les
+                  affaires, notre engagement indéfectible au service de l'Église
+                  et notre concentration inlassable sur le Christ que nous
+                  représentons sur le marché.
+                </p>
+                <a href="pages/qui-sommes-nous.html" class="mv-card__link">
+                  Lire la vision complète →
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         3. SECTION CONVENTION 2027
+         ============================================================ -->
+      <section class="convention-section" id="convention">
+        <div class="convention-section__glow"></div>
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="convention-section__badge">Événement Majeur</span>
+            <h2 class="convention-section__title">
+              Convention ASI-UMES <span class="text-accent">2027</span>
+            </h2>
+          </div>
+
+          <div class="convention-section__grid">
+            <!-- Colonne gauche : Infos + Countdown -->
+            <div class="convention-section__info reveal">
+              <div class="convention-info-row">
+                <div class="convention-info-pill">
+                  <span class="convention-info-pill__icon">📅</span>
+                  <div>
+                    <span class="convention-info-pill__label">Date</span>
+                    <span class="convention-info-pill__value"
+                      >14 – 17 Mai 2027</span
+                    >
+                  </div>
+                </div>
+                <div class="convention-info-pill">
+                  <span class="convention-info-pill__icon">📍</span>
+                  <div>
+                    <span class="convention-info-pill__label">Lieu</span>
+                    <span class="convention-info-pill__value"
+                      >Hôtel Prunel — Jacqueville, Abidjan</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="convention-countdown-block">
+                <p class="convention-countdown-label">
+                  Compte à rebours jusqu'au début de la Convention (14 Mai 2027)
+                </p>
+                <div class="countdown" id="heroCountdown">
+                  <div class="countdown__block">
+                    <span class="countdown__number" data-days>00</span>
+                    <span class="countdown__label">Jours</span>
+                  </div>
+                  <div class="countdown__block">
+                    <span class="countdown__number" data-hours>00</span>
+                    <span class="countdown__label">Heures</span>
+                  </div>
+                  <div class="countdown__block">
+                    <span class="countdown__number" data-minutes>00</span>
+                    <span class="countdown__label">Minutes</span>
+                  </div>
+                  <div class="countdown__block">
+                    <span class="countdown__number" data-seconds>00</span>
+                    <span class="countdown__label">Secondes</span>
+                  </div>
+                </div>
+                <div class="convention-countdown-cta">
+                  <a
+                    href="pages/inscription-convention-2027.html"
+                    class="btn btn--gold"
+                  >
+                    S'inscrire à la Convention 2027 →
+                  </a>
+                  <p class="convention-countdown-note">
+                    Places limitées • Inscriptions ouvertes
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colonne droite : Photos Hôtel -->
+            <div class="convention-section__photos reveal reveal-delay-2">
+              <div class="convention-photo">
+                <img
+                  src="assets/images/hotel1.jpg"
+                  alt="Hôtel Prunel — Vue extérieure"
+                  loading="lazy"
+                />
+                <div class="convention-photo__overlay"></div>
+              </div>
+              <div class="convention-photo">
+                <img
+                  src="assets/images/hotel2.jpg"
+                  alt="Hôtel Prunel — Salle de conférence"
+                  loading="lazy"
+                />
+                <div class="convention-photo__overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         4. SECTION CHAPITRES
+         ============================================================ -->
+      <section class="section section--alt" id="chapitres">
+        <div class="container">
+          <div class="section-header reveal">
+            <span class="section-header__label">Réseau Régional</span>
+            <h2 class="section-header__title">Nos Chapitres dans l'UMES</h2>
+            <p class="section-header__subtitle">
+              L'ASI UMES est présente dans cinq pays d'Afrique de l'Ouest pour
+              rassembler et mobiliser les laïcs adventistes.
+            </p>
+          </div>
+
+          <div class="chapters-grid">
+            <article class="chapter-card reveal">
+              <div class="chapter-card__bar chapter-card__bar--benin"></div>
+              <div class="chapter-card__flag-wrap">🇧🇯</div>
+              <h3 class="chapter-card__name">Bénin</h3>
+              <p class="chapter-card__sub">Chapitre local</p>
+            </article>
+
+            <article class="chapter-card reveal reveal-delay-1">
+              <div class="chapter-card__bar chapter-card__bar--burkina"></div>
+              <div class="chapter-card__flag-wrap">🇧🇫</div>
+              <h3 class="chapter-card__name">Burkina Faso</h3>
+              <p class="chapter-card__sub">Chapitre local</p>
+            </article>
+
+            <article class="chapter-card reveal reveal-delay-2">
+              <div class="chapter-card__bar chapter-card__bar--ci"></div>
+              <div class="chapter-card__flag-wrap">🇨🇮</div>
+              <h3 class="chapter-card__name">Côte d'Ivoire</h3>
+              <p class="chapter-card__sub">Chapitre local</p>
+            </article>
+
+            <article class="chapter-card reveal reveal-delay-3">
+              <div class="chapter-card__bar chapter-card__bar--niger"></div>
+              <div class="chapter-card__flag-wrap">🇳🇪</div>
+              <h3 class="chapter-card__name">Niger</h3>
+              <p class="chapter-card__sub">Chapitre local</p>
+            </article>
+
+            <article class="chapter-card reveal reveal-delay-4">
+              <div class="chapter-card__bar chapter-card__bar--togo"></div>
+              <div class="chapter-card__flag-wrap">🇹🇬</div>
+              <h3 class="chapter-card__name">Togo</h3>
+              <p class="chapter-card__sub">Chapitre local</p>
+            </article>
+          </div>
+
+          <div class="text-center mt-12 reveal">
+            <a href="pages/chapitres.html" class="btn btn--outline">
+              Découvrir tous nos chapitres →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         5. SECTION ACTUALITÉS — À LA UNE
+         ============================================================ -->
+      <section class="section" id="actualites">
+        <div class="container">
+          <div class="news-header reveal">
+            <div>
+              <span class="section-header__label" style="text-align: left"
+                >Information &amp; Vie de l'Union</span
+              >
+              <h2 class="section-header__title" style="text-align: left">
+                Dernières Actualités
+              </h2>
+            </div>
+            <a href="pages/actualites.html" class="news-header__link">
+              Voir toutes les actualités →
+            </a>
+          </div>
+
+          <div class="news-featured reveal">
+            <div class="news-featured__content">
+              <div class="news-featured__tags">
+                <span class="badge badge--gold">À la Une</span>
+                <span class="news-featured__theme">
+                  Thème : <strong>Unis pour la Mission</strong>
+                </span>
+              </div>
+              <h3 class="news-featured__title">
+                Expansion et dynamisation d'ASI à travers l'Union Mission de
+                l'Est du Sahel
+              </h3>
+              <p class="news-featured__text">
+                Depuis le vote du comité de mi-année 2023, la coordination d'ASI
+                UMES œuvre activement à faire connaître notre vision et à
+                implanter des bureaux exécutifs dans nos champs. Après les
+                rassemblements mémorables d'Aného au Togo en présence de la
+                Présidence d'ASI Europe, l'année 2025 marque une étape décisive
+                avec le déploiement de nouveaux ministères et la structuration
+                des laïcs au service du marché.
+              </p>
+              <a href="pages/actualites.html" class="btn btn--primary btn--sm">
+                Lire le rapport complet →
+              </a>
+            </div>
+            <div class="news-featured__photos">
+              <div class="news-featured__photo">
+                <img
+                  src="assets/images/actualite1.jpeg"
+                  alt="Convention ASI Aného"
+                  loading="lazy"
+                />
+                <div class="news-featured__photo-overlay"></div>
+                <span class="news-featured__photo-tag">Rapport 2025</span>
+              </div>
+              <div class="news-featured__photo">
+                <img
+                  src="assets/images/actualite2.jpeg"
+                  alt="Bureau Exécutif ASI"
+                  loading="lazy"
+                />
+                <div class="news-featured__photo-overlay"></div>
+                <span class="news-featured__photo-tag">Rapport 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+         6. SECTION APPEL AU DON (COMPACTE, FOND CLAIR)
+         ============================================================ -->
+      <section class="donate-compact" id="don">
+        <div class="container">
+          <div class="donate-compact__inner reveal">
+            <span class="donate-compact__badge">Soutenir la Mission</span>
+            <h2 class="donate-compact__title">
+              Participez à l'Avancement de l'Œuvre de ASI - UMES
+            </h2>
+            <p class="donate-compact__text">
+              Vos contributions soutiennent les projets d'évangélisation,
+              l'accompagnement des laïcs et le développement des chapitres
+              locaux.
+            </p>
+            <div class="donate-compact__buttons">
+              <a href="pages/faire-un-don.html" class="btn btn--gold">
+                💰 Faire un don maintenant
+              </a>
+              <a href="pages/qui-sommes-nous.html" class="btn btn--outline">
+                En savoir plus
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="components/component-loader.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

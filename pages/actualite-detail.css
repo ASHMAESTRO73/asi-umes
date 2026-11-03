@@ -1,0 +1,248 @@
+/* ============================================
+   DÉTAIL ACTUALITÉ — ASI UMES
+   (Réutilisable pour tous les articles)
+   ============================================ */
+
+/* ---------- 1. BANNER EN-TÊTE ---------- */
+.art-hero {
+  background: linear-gradient(135deg, #192569 0%, #233287 60%, #1a2563 100%);
+  padding: 60px 0 50px;
+  color: #ffffff !important;
+}
+
+.art-hero * {
+  color: #ffffff !important;
+}
+
+.art-hero__inner {
+  max-width: 800px;
+}
+
+.art-hero__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #daa520 !important;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  transition: opacity 0.2s;
+}
+
+.art-hero__back:hover {
+  opacity: 0.7;
+}
+
+.art-hero__badge {
+  display: inline-block;
+  background: #b8860b;
+  color: #ffffff !important;
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 14px;
+  border-radius: 50px;
+  margin-bottom: 14px;
+}
+
+.art-hero__title {
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: #ffffff !important;
+}
+
+.art-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.78rem;
+  color: #cbd5e1 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 16px;
+}
+
+/* ---------- 2. CONTENU ---------- */
+.art-content {
+  padding: 60px 0 80px;
+  background: #f0f2f7;
+}
+
+.art-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Galerie */
+.art-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.art-gallery__item {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  aspect-ratio: 4 / 3;
+}
+
+.art-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Corps */
+.art-body {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 32px;
+}
+
+.art-section {
+  margin-bottom: 32px;
+}
+
+.art-section h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #233287;
+  margin-bottom: 12px;
+}
+
+.art-section p {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.75;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.art-section h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #233287;
+  margin-bottom: 10px;
+}
+
+/* Ministères */
+.art-ministry {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 22px 24px;
+  margin-bottom: 14px;
+}
+
+.art-ministry h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #233287;
+  margin-bottom: 8px;
+}
+
+.art-ministry p {
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.65;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+/* Section highlight */
+.art-section--highlight {
+  background: rgba(35, 50, 135, 0.04);
+  border: 1px solid rgba(35, 50, 135, 0.12);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.art-section--highlight p {
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+/* Footer */
+.art-footer {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 24px;
+  margin-top: 12px;
+}
+
+.art-footer__back {
+  color: #233287;
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+.art-footer__back:hover {
+  color: #b8860b;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  .art-hero {
+    padding: 40px 0 36px;
+  }
+  .art-card {
+    padding: 24px 20px;
+  }
+  .art-gallery {
+    grid-template-columns: 1fr;
+  }
+  .art-hero__meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
+/* Délégués (Convention 2024) */
+.art-delegues {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.art-delegue {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.art-delegue__check {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+@media (max-width: 640px) {
+  .art-delegues {
+    grid-template-columns: 1fr;
+  }
+}

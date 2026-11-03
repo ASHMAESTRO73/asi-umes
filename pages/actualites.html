@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actualités & Rapports — ASI UMES</title>
+    <meta
+      name="description"
+      content="Actualités, rapports annuels et comptes-rendus des conventions ASI UMES."
+    />
+    <link rel="stylesheet" href="../components/global.css" />
+    <link rel="stylesheet" href="actualites.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <!-- 1. HERO BANNER -->
+      <section class="news-hero">
+        <div class="news-hero__glow"></div>
+        <div class="container news-hero__inner">
+          <span class="news-hero__badge reveal">Presse &amp; Publications</span>
+          <h1 class="news-hero__title reveal">Actualités &amp; Rapports</h1>
+          <p class="news-hero__subtitle reveal">
+            Suivez la vie de l'ASI UMES : bilans d'activités, conventions
+            sous-régionales, création de ministères de soutien et communiqués.
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. GRILLE D'ACTUALITÉS (générée par JS) -->
+      <section class="news-grid-section">
+        <div class="container">
+          <div class="news-grid" id="newsGrid">
+            <!-- Les articles sont injectés ici par actualites-data.js -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../components/component-loader.js"></script>
+    <script src="actualites-data.js"></script>
+    <script src="actualites.js"></script>
+  </body>
+</html>

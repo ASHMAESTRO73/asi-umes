@@ -1,0 +1,416 @@
+/* ============================================
+   ÉVÉNEMENTS — ASI UMES
+   ============================================ */
+
+/* ---------- 1. HERO BANNER ---------- */
+.evt-hero {
+  position: relative;
+  background: linear-gradient(135deg, #192569 0%, #233287 60%, #1a2563 100%);
+  padding: 100px 0 80px;
+  color: #ffffff !important;
+  overflow: hidden;
+}
+
+.evt-hero * {
+  color: #ffffff !important;
+}
+
+.evt-hero__glow {
+  position: absolute;
+  top: 0;
+  right: -5%;
+  width: 40%;
+  height: 100%;
+  background: rgba(184, 134, 11, 0.1);
+  transform: skewX(12deg) translateX(40px);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.evt-hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.evt-hero__badge {
+  display: inline-block;
+  background: #b8860b;
+  color: #ffffff !important;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 18px;
+}
+
+.evt-hero__title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  color: #ffffff !important;
+}
+
+.evt-hero__subtitle {
+  font-size: 1.15rem;
+  color: #ffffff !important;
+  line-height: 1.7;
+  max-width: 680px;
+}
+
+/* ---------- 2. ÉVÉNEMENT PHARE ---------- */
+.evt-main {
+  padding: 80px 0;
+  background: #f0f2f7;
+}
+
+.evt-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.evt-card__header {
+  background: #0f172a;
+  color: #ffffff !important;
+  padding: 28px 36px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.evt-card__header * {
+  color: #ffffff !important;
+}
+
+.evt-card__spark {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #b8860b;
+  color: #ffffff !important;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 14px;
+  border-radius: 50px;
+  margin-bottom: 8px;
+}
+
+.evt-card__title {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 900;
+  color: #ffffff !important;
+}
+
+.evt-card__cta {
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-size: 0.85rem;
+}
+
+.evt-card__body {
+  padding: 36px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 36px;
+}
+
+/* Infos gauche */
+.evt-card__infos {
+  border-right: 1px solid #e2e8f0;
+  padding-right: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.evt-info-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.evt-info-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.evt-info-icon--blue {
+  background: rgba(35, 50, 135, 0.08);
+}
+
+.evt-info-icon--gold {
+  background: rgba(184, 134, 11, 0.1);
+}
+
+.evt-info-label {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+}
+
+.evt-info-value {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.evt-card__note {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 14px;
+  margin-top: 6px;
+}
+
+.evt-card__note p {
+  font-size: 0.78rem;
+  color: #64748b;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* Programme droite */
+.evt-program__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 14px;
+  margin-bottom: 18px;
+}
+
+.evt-program__head h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #233287;
+}
+
+.evt-program__badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: #fef3c7;
+  color: #92400e;
+  padding: 4px 12px;
+  border-radius: 50px;
+  border: 1px solid #fde68a;
+}
+
+.evt-program__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.evt-program__item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.evt-program__item-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #233287;
+  margin-bottom: 6px;
+}
+
+.evt-program__item p {
+  font-size: 0.78rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.evt-program__footer {
+  background: rgba(35, 50, 135, 0.04);
+  border: 1px solid rgba(35, 50, 135, 0.12);
+  border-radius: 14px;
+  padding: 14px 18px;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.evt-program__footer p {
+  font-size: 0.78rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+/* ---------- 3. AUTRES ACTIVITÉS ---------- */
+.evt-activities {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.evt-activities__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.evt-act-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 32px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.evt-act-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(35, 50, 135, 0.1);
+}
+
+.evt-act-card__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+}
+
+.evt-act-card__icon--blue {
+  background: rgba(59, 130, 246, 0.1);
+}
+.evt-act-card__icon--gold {
+  background: rgba(184, 134, 11, 0.1);
+}
+.evt-act-card__icon--green {
+  background: rgba(34, 197, 94, 0.1);
+}
+
+.evt-act-card__tag {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.evt-act-card__tag--blue {
+  background: #eff6ff;
+  color: #2563eb;
+}
+.evt-act-card__tag--gold {
+  background: #fffbeb;
+  color: #b8860b;
+}
+.evt-act-card__tag--green {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.evt-act-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.evt-act-card p {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.65;
+}
+
+/* ---------- 4. CTA BANNIÈRE ---------- */
+.evt-cta {
+  background: #0f172a;
+  border-top: 4px solid #b8860b;
+  padding: 72px 0;
+  color: #ffffff !important;
+}
+
+.evt-cta * {
+  color: #ffffff !important;
+}
+
+.evt-cta__inner {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.evt-cta__inner h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 14px;
+  color: #ffffff !important;
+}
+
+.evt-cta__inner p {
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .evt-card__body {
+    grid-template-columns: 1fr;
+  }
+  .evt-card__infos {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 24px;
+  }
+  .evt-program__grid {
+    grid-template-columns: 1fr;
+  }
+  .evt-activities__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .evt-hero {
+    padding: 80px 0 60px;
+  }
+  .evt-card__header {
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .evt-card__body {
+    padding: 24px 20px;
+  }
+  .evt-cta__inner {
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — ASI UMES</title>
+    <meta
+      name="description"
+      content="Contactez le secrétariat ASI UMES : e-mail, téléphone, WhatsApp et formulaire de contact."
+    />
+    <link rel="stylesheet" href="../components/global.css" />
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <!-- ======================== -->
+      <!-- 1. HERO BANNER           -->
+      <!-- ======================== -->
+      <section class="contact-hero">
+        <div class="container contact-hero__inner">
+          <span class="contact-hero__badge reveal"
+            >Secrétariat &amp; Information</span
+          >
+          <h1 class="contact-hero__title reveal">Contactez-nous</h1>
+          <p class="contact-hero__subtitle reveal">
+            Une question sur nos activités, la Convention ? Notre équipe est à
+            votre écoute.
+          </p>
+        </div>
+      </section>
+
+      <!-- ======================== -->
+      <!-- 2. INFOS + FORMULAIRE    -->
+      <!-- ======================== -->
+      <section class="contact-main">
+        <div class="container">
+          <div class="contact-layout">
+            <!-- Colonne gauche : cartes d'info -->
+            <div class="contact-infos">
+              <!-- E-mail -->
+              <div class="contact-info-card reveal">
+                <div class="contact-info-icon contact-info-icon--blue">📧</div>
+                <div>
+                  <h3>E-mail Officiel</h3>
+                  <p class="contact-info-value">
+                    <a href="mailto:contact@asi-umes.org"
+                      >contact@asi-umes.org</a
+                    >
+                  </p>
+                  <p class="contact-info-hint">Réponse sous 24h</p>
+                </div>
+              </div>
+
+              <!-- Téléphone -->
+              <div class="contact-info-card contact-info-card--shadow reveal">
+                <div class="contact-info-icon contact-info-icon--green">📱</div>
+                <div>
+                  <h3>Téléphone &amp; WhatsApp</h3>
+                  <p class="contact-info-value">
+                    <a
+                      href="https://wa.me/22899251358"
+                      target="_blank"
+                      rel="noopener"
+                      >+228 99 25 13 58</a
+                    >
+                  </p>
+                  <p class="contact-info-hint">
+                    Appels &amp; Messages WhatsApp
+                  </p>
+                </div>
+              </div>
+
+              <!-- Siège -->
+              <div class="contact-info-card reveal">
+                <div class="contact-info-icon contact-info-icon--gold">📍</div>
+                <div>
+                  <h3>Siège Social</h3>
+                  <p class="contact-info-text">
+                    Union Mission de l'Est du Sahel
+                  </p>
+                  <p class="contact-info-hint">Abidjan, Côte d'Ivoire</p>
+                </div>
+              </div>
+
+              <!-- Chapitres -->
+              <div class="contact-info-card contact-info-card--blue reveal">
+                <h3>Nos Chapitres</h3>
+                <p>Retrouvez l'ASI dans 5 pays de notre Union :</p>
+                <div class="contact-chapters">
+                  <span>🇧🇯 Bénin</span>
+                  <span>🇧🇫 Burkina Faso</span>
+                  <span>🇨🇮 Côte d'Ivoire</span>
+                  <span>🇳🇪 Niger</span>
+                  <span>🇹🇬 Togo</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colonne droite : formulaire -->
+            <div class="contact-form-wrap reveal">
+              <div class="contact-form-card">
+                <h2>Envoyez-nous un message</h2>
+
+                <!-- Formulaire -->
+                <form
+                  id="contactForm"
+                  class="contact-form"
+                  action="../envoyer-contact.php"
+                  method="POST"
+                >
+                  <div class="contact-form__row">
+                    <div class="contact-form__group">
+                      <label>Nom &amp; Prénoms *</label>
+                      <input
+                        type="text"
+                        name="name"
+                        required
+                        placeholder="Votre nom"
+                      />
+                    </div>
+                    <div class="contact-form__group">
+                      <label>Adresse E-mail *</label>
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        placeholder="exemple@email.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="contact-form__group">
+                    <label>Sujet *</label>
+                    <select name="sujet" required>
+                      <option value="">
+                        Sélectionnez le motif de votre message
+                      </option>
+                      <option>Renseignements Convention</option>
+                      <option>Adhésion à un chapitre ASI</option>
+                      <option>Partenariat ou Faire un Don</option>
+                      <option>Autre question</option>
+                    </select>
+                  </div>
+
+                  <div class="contact-form__group">
+                    <label>Message *</label>
+                    <textarea
+                      name="message"
+                      required
+                      rows="5"
+                      placeholder="Écrivez votre message ici..."
+                    ></textarea>
+                  </div>
+
+                  <button type="submit" class="contact-form__submit">
+                    Envoyer le Message ✉️
+                  </button>
+                </form>
+
+                <!-- Message de succès -->
+                <div
+                  id="contactSuccess"
+                  class="contact-success"
+                  style="display: none"
+                >
+                  <div class="contact-success__icon">✅</div>
+                  <h3>Message Envoyé !</h3>
+                  <p>
+                    Merci de nous avoir contactés. Le secrétariat d'ASI UMES
+                    vous répondra dans les plus brefs délais à l'adresse
+                    indiquée.
+                  </p>
+                  <button id="contactReset" class="btn btn--blue">
+                    Envoyer un autre message
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../components/component-loader.js"></script>
+    <script src="contact.js"></script>
+  </body>
+</html>

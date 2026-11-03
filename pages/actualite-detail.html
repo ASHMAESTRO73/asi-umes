@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article — ASI UMES</title>
+    <link rel="stylesheet" href="../components/global.css" />
+    <link rel="stylesheet" href="actualite-detail.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <!-- BANNER (rempli par JS) -->
+      <section class="art-hero">
+        <div class="container art-hero__inner">
+          <a href="actualites.html" class="art-hero__back"
+            >← Retour aux actualités</a
+          >
+          <span class="art-hero__badge" id="artBadge"></span>
+          <h1 class="art-hero__title" id="artTitle"></h1>
+          <div class="art-hero__meta" id="artMeta"></div>
+        </div>
+      </section>
+
+      <!-- CONTENU (rempli par JS) -->
+      <section class="art-content">
+        <div class="container">
+          <div class="art-card">
+            <!-- Galerie -->
+            <div class="art-gallery" id="artGallery"></div>
+
+            <!-- Corps -->
+            <div class="art-body" id="artBody"></div>
+
+            <!-- Footer -->
+            <div class="art-footer">
+              <a href="actualites.html" class="art-footer__back"
+                >← Retour à la liste des actualités</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ERREUR (si ID introuvable) -->
+      <section class="art-content" id="artError" style="display: none">
+        <div class="container">
+          <div class="art-card" style="text-align: center; padding: 60px 40px">
+            <h2 style="color: #233287; margin-bottom: 12px">
+              Article introuvable
+            </h2>
+            <p style="color: #64748b; margin-bottom: 24px">
+              L'article que vous recherchez n'existe pas ou a été supprimé.
+            </p>
+            <a href="actualites.html" class="btn btn--blue btn--lg"
+              >← Retour aux actualités</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../components/component-loader.js"></script>
+    <script src="actualites-data.js"></script>
+    <script src="actualite-detail.js"></script>
+  </body>
+</html>

@@ -1,0 +1,420 @@
+/* ============================================
+   CHAPITRES NATIONAUX — ASI UMES
+   ============================================ */
+
+/* ---------- 1. HERO BANNER ---------- */
+.chap-hero {
+  position: relative;
+  background: linear-gradient(135deg, #192569 0%, #233287 60%, #1a2563 100%);
+  padding: 100px 0 80px;
+  color: #ffffff !important;
+  overflow: hidden;
+}
+
+.chap-hero * {
+  color: #ffffff !important;
+}
+
+.chap-hero__glow {
+  position: absolute;
+  top: 0;
+  right: -5%;
+  width: 40%;
+  height: 100%;
+  background: rgba(184, 134, 11, 0.1);
+  transform: skewX(12deg) translateX(40px);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.chap-hero__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.chap-hero__badge {
+  display: inline-block;
+  background: #b8860b;
+  color: #ffffff !important;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 18px;
+}
+
+.chap-hero__title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  color: #ffffff !important;
+}
+
+.chap-hero__subtitle {
+  font-size: 1.15rem;
+  color: #ffffff !important;
+  line-height: 1.7;
+  max-width: 680px;
+}
+
+/* ---------- 2. RÔLE D'UN CHAPITRE ---------- */
+.chap-role {
+  padding: 60px 0;
+  background: #f0f2f7;
+}
+
+.chap-role__card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.chap-role__tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b8860b;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  padding: 4px 14px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+}
+
+.chap-role__text h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #233287;
+  margin-bottom: 12px;
+}
+
+.chap-role__text p {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.chap-role__visual {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.chap-role__visual:hover {
+  transform: scale(1.04);
+}
+
+.chap-role__icon {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.chap-role__visual h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+.chap-role__visual p {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* ---------- 3. GRILLE DES CHAPITRES ---------- */
+.chap-grid-section {
+  padding: 60px 0 80px;
+  background: #fff;
+}
+
+.chap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chap-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.chap-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(35, 50, 135, 0.12);
+}
+
+/* Bordures colorées */
+.chap-card--green {
+  border-left: 4px solid #059669;
+}
+.chap-card--red {
+  border-left: 4px solid #dc2626;
+}
+.chap-card--orange {
+  border-left: 4px solid #f97316;
+}
+.chap-card--amber {
+  border-left: 4px solid #ea580c;
+}
+.chap-card--teal {
+  border-left: 4px solid #047857;
+}
+
+.chap-card__top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.chap-card__flag {
+  font-size: 2.4rem;
+  transition: transform 0.3s ease;
+}
+
+.chap-card:hover .chap-card__flag {
+  transform: scale(1.15);
+}
+
+.chap-card__top h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #1e293b;
+  transition: color 0.3s ease;
+}
+
+.chap-card:hover .chap-card__top h3 {
+  color: #233287;
+}
+
+.chap-card__country {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.chap-card__status {
+  display: inline-block;
+  background: rgba(35, 50, 135, 0.08);
+  color: #233287;
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+.chap-card__status--gold {
+  background: rgba(184, 134, 11, 0.1);
+  color: #b8860b;
+}
+
+.chap-card__desc {
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.chap-card__bottom {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chap-card__dir {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.chap-card__more {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #b8860b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  transform: translateX(8px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.chap-card:hover .chap-card__more {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Carte CTA Adhésion */
+.chap-card--cta {
+  background: linear-gradient(135deg, #233287, #0f172a);
+  border: none;
+  color: #ffffff !important;
+}
+
+.chap-card--cta * {
+  color: #ffffff !important;
+}
+
+.chap-card--cta:hover {
+  box-shadow: 0 12px 40px rgba(35, 50, 135, 0.3);
+}
+
+.chap-card__cta-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(184, 134, 11, 0.2);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+  transition: background 0.3s ease;
+}
+
+.chap-card--cta:hover .chap-card__cta-icon {
+  background: #b8860b;
+}
+
+.chap-card--cta h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #ffffff !important;
+}
+
+.chap-card--cta p {
+  font-size: 0.82rem;
+  color: #cbd5e1 !important;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.chap-card__cta-btn {
+  text-align: center;
+  font-size: 0.82rem;
+}
+
+/* ---------- 4. BANNIÈRE CONTACT ---------- */
+.chap-cta {
+  background: #0f172a;
+  border-top: 4px solid #b8860b;
+  padding: 72px 0;
+  color: #ffffff !important;
+}
+
+.chap-cta * {
+  color: #ffffff !important;
+}
+
+.chap-cta__inner {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.chap-cta__inner h2 {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #ffffff !important;
+}
+
+.chap-cta__inner > p {
+  color: #ffffff !important;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.chap-cta__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+.btn--whatsapp {
+  background: #25d366 !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+
+.btn--whatsapp:hover {
+  background: #20bd5a !important;
+  transform: scale(1.04);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .chap-role__card {
+    grid-template-columns: 1fr;
+  }
+  .chap-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .chap-hero {
+    padding: 80px 0 60px;
+  }
+  .chap-role__card {
+    padding: 24px 20px;
+  }
+  .chap-grid {
+    grid-template-columns: 1fr;
+  }
+  .chap-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

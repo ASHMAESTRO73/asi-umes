@@ -1,0 +1,369 @@
+/* ============================================
+   FAIRE UN DON — ASI UMES
+   ============================================ */
+
+/* ---------- HERO ---------- */
+.don-hero {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #192569 0%, #233287 50%, #1a1a4e 100%);
+  overflow: hidden;
+  padding: 120px 20px 80px;
+}
+
+.don-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 30% 50%,
+    rgba(218, 165, 32, 0.12) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.don-hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 750px;
+}
+
+.don-hero__badge {
+  display: inline-block;
+  background: rgba(218, 165, 32, 0.15);
+  border: 1px solid rgba(218, 165, 32, 0.4);
+  color: #daa520;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 8px 22px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+  letter-spacing: 0.5px;
+}
+
+.don-hero__title {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 900;
+  color: #ffffff !important;
+  margin: 0 0 20px;
+  line-height: 1.15;
+}
+
+.don-hero__text {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.88) !important;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.don-hero * {
+  color: #ffffff !important;
+}
+
+.don-hero__badge {
+  color: #daa520 !important;
+}
+
+/* ---------- POURQUOI DONNER ---------- */
+.don-pourquoi {
+  background: #f8f9fc;
+  padding: 90px 20px;
+}
+
+.don-pourquoi__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 50px;
+}
+
+.don-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(35, 50, 135, 0.06);
+  border: 1px solid rgba(35, 50, 135, 0.06);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.don-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(35, 50, 135, 0.12);
+}
+
+.don-card__icon {
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+  display: block;
+}
+
+.don-card__title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #233287;
+  margin: 0 0 12px;
+}
+
+.don-card__text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ---------- COMMENT DONNER ---------- */
+.don-comment {
+  background: linear-gradient(135deg, #192569 0%, #233287 100%);
+  padding: 90px 20px;
+}
+
+.don-comment * {
+  color: #ffffff !important;
+}
+
+.don-comment .section__title {
+  color: #ffffff !important;
+}
+
+.don-comment .section__subtitle {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.don-comment__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 50px;
+}
+
+.don-mode {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  overflow: hidden;
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.don-mode:hover {
+  transform: translateY(-6px);
+  border-color: rgba(218, 165, 32, 0.4);
+}
+
+.don-mode__header {
+  background: rgba(218, 165, 32, 0.12);
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.don-mode__icon {
+  font-size: 2rem;
+}
+
+.don-mode__title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #daa520 !important;
+  margin: 0;
+}
+
+.don-mode__body {
+  padding: 28px;
+}
+
+.don-mode__label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: rgba(255, 255, 255, 0.5) !important;
+  margin: 0 0 4px;
+}
+
+.don-mode__value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff !important;
+  margin: 0 0 18px;
+}
+
+.don-mode__note {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.65) !important;
+  line-height: 1.6;
+  margin: 18px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.don-mode__note strong {
+  color: #daa520 !important;
+}
+
+/* ---------- TRANSPARENCE ---------- */
+.don-transparence {
+  background: #ffffff;
+  padding: 90px 20px;
+}
+
+.don-transparence__content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 50px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.don-transparence__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.don-transparence__list li {
+  font-size: 1.05rem;
+  color: #1e293b;
+  line-height: 1.7;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.don-transparence__list li:last-child {
+  border-bottom: none;
+}
+
+.don-transparence__cta {
+  background: #f0f2f7;
+  border-radius: 20px;
+  padding: 40px 32px;
+  text-align: center;
+}
+
+.don-transparence__cta-text {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.65;
+  margin: 0 0 24px;
+}
+
+/* ---------- CTA FINAL ---------- */
+.don-cta {
+  background: linear-gradient(135deg, #b8860b 0%, #daa520 50%, #d4a017 100%);
+  padding: 80px 20px;
+}
+
+.don-cta * {
+  color: #ffffff !important;
+}
+
+.don-cta__inner {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.don-cta__title {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 900;
+  color: #ffffff !important;
+  margin: 0 0 18px;
+}
+
+.don-cta__text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.92) !important;
+  line-height: 1.7;
+  margin: 0 0 32px;
+}
+
+.btn--white {
+  display: inline-block;
+  background: #ffffff;
+  color: #233287 !important;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 16px 36px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn--white:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  color: #233287 !important;
+}
+
+/* ---------- REVEAL ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .don-pourquoi__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .don-comment__grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .don-transparence__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .don-hero {
+    min-height: 45vh;
+    padding: 100px 16px 60px;
+  }
+
+  .don-pourquoi__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .don-card {
+    padding: 28px 22px;
+  }
+
+  .don-mode__header {
+    padding: 18px 20px;
+  }
+
+  .don-mode__body {
+    padding: 22px 20px;
+  }
+
+  .don-transparence__cta {
+    padding: 28px 22px;
+  }
+}

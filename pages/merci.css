@@ -1,0 +1,159 @@
+/* ============================================
+   PAGES DE CONFIRMATION — ASI UMES
+   ============================================ */
+
+.merci-hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #192569 0%, #233287 50%, #1a1a4e 100%);
+  padding: 120px 20px 80px;
+}
+
+.merci-hero--gold {
+  background: linear-gradient(135deg, #192569 0%, #233287 40%, #3d2e0a 100%);
+}
+
+.merci-hero__inner {
+  text-align: center;
+  max-width: 650px;
+}
+
+.merci-hero__icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.merci-hero__title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 900;
+  color: #ffffff !important;
+  margin: 0 0 18px;
+  line-height: 1.2;
+}
+
+.merci-hero__text {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85) !important;
+  line-height: 1.75;
+  margin: 0 0 28px;
+}
+
+.merci-hero__text strong {
+  color: #daa520 !important;
+}
+
+.merci-hero__info {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px 28px;
+  margin-bottom: 28px;
+}
+
+.merci-hero__info p {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.95rem;
+  margin: 6px 0;
+}
+
+.merci-hero__info strong {
+  color: #daa520 !important;
+}
+
+/* Récap inscription */
+.merci-hero__recap {
+  background: rgba(218, 165, 32, 0.1);
+  border: 1px solid rgba(218, 165, 32, 0.3);
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-bottom: 28px;
+}
+
+.merci-hero__recap-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #daa520 !important;
+  margin: 0 0 16px;
+}
+
+.merci-hero__recap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.merci-hero__recap-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.merci-hero__recap-label {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5) !important;
+  font-weight: 600;
+}
+
+.merci-hero__recap-value {
+  font-size: 0.95rem;
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+/* Boutons */
+.merci-hero__btns {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.merci-hero .btn--outline {
+  background: transparent;
+  color: #ffffff !important;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.merci-hero .btn--outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  color: #ffffff !important;
+}
+
+/* Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal.revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .merci-hero {
+    min-height: 70vh;
+    padding: 100px 16px 60px;
+  }
+
+  .merci-hero__recap-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .merci-hero__btns {
+    flex-direction: column;
+  }
+
+  .merci-hero__btns .btn {
+    width: 100%;
+  }
+}
