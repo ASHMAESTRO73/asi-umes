@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - name: "actualites"
+    label: "Actualites"
+    folder: "pages/data"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "ID", name: "id", widget: "string" }
+      - { label: "Tag", name: "tag", widget: "string" }
+      - { label: "Couleur Tag", name: "tagColor", widget: "select", options: ["blue", "gold"] }
+      - { label: "Date", name: "date", widget: "string" }
+      - { label: "Source", name: "source", widget: "string" }
+      - { label: "Titre", name: "titre", widget: "string" }
+      - { label: "Resume", name: "excerpt", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Contenu", name: "contenu", widget: "markdown" }
