@@ -564,3 +564,113 @@
   min-width: 100% !important;
   flex-shrink: 0 !important;
 }
+
+/* --- Frais mis à jour --- */
+.conv-fees__equiv {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #233287;
+  margin-top: 2px;
+}
+
+.conv-fees__includes {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+/* --- Hébergement --- */
+.conv-lodging {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.conv-lodging__hotels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.conv-lodging__hotel {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.conv-lodging__name {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 4px;
+}
+
+.conv-lodging__loc {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  margin: 0 0 8px;
+}
+
+.conv-lodging__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.78rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.conv-lodging__list strong {
+  color: #233287;
+}
+
+/* --- Activités --- */
+.conv-activities {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.conv-activities__note {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* --- Légendes photos --- */
+.conv-photo__caption {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #233287;
+  margin-top: 8px;
+}
+
+@media (max-width: 640px) {
+  .conv-lodging__hotels {
+    grid-template-columns: 1fr;
+  }
+}
+.conv-lodging__hotels--4 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.conv-lodging__hotel--star {
+  border: 2px solid #b8860b;
+  background: rgba(184, 134, 11, 0.04);
+}
+
+.conv-lodging__note {
+  font-size: 0.72rem;
+  color: #b8860b;
+  font-style: italic;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.conv-lodging__list s {
+  color: #94a3b8;
+}

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paiement — Convention ASI UMES 2027</title>
+    <meta
+      name="description"
+      content="Effectuez le paiement de votre inscription à la Convention ASI UMES 2027."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23233287'/%3E%3Ctext x='50' y='62' font-family='Segoe UI,sans-serif' font-size='32' font-weight='900' fill='%23DAA520' text-anchor='middle'%3EASI%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="../components/global.css" />
+    <link rel="stylesheet" href="paiement.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <!-- ======================== -->
+      <!-- 1. HERO                  -->
+      <!-- ======================== -->
+      <section class="pay-hero">
+        <div class="container pay-hero__inner">
+          <span class="pay-hero__badge reveal">Convention 2027</span>
+          <h1 class="pay-hero__title reveal">Paiement de votre inscription</h1>
+          <p class="pay-hero__subtitle reveal">
+            Choisissez votre mode de paiement ci-dessous pour valider
+            définitivement votre participation.
+          </p>
+        </div>
+      </section>
+
+      <!-- ======================== -->
+      <!-- 2. RAPPEL MONTANT        -->
+      <!-- ======================== -->
+      <section class="pay-reminder">
+        <div class="container">
+          <div class="pay-reminder__card reveal">
+            <div class="pay-reminder__icon">💳</div>
+            <div class="pay-reminder__text">
+              <h3>Rappel des modalités</h3>
+              <p>
+                Pour valider votre inscription, versez
+                <strong>les frais d'inscription (45 000 FCFA)</strong> +
+                <strong>la 1ère nuitée d'hébergement</strong>. Le reste est à
+                régler <strong>avant le 30 Avril 2027</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== -->
+      <!-- 3. MODES DE PAIEMENT     -->
+      <!-- ======================== -->
+      <section class="pay-methods">
+        <div class="container">
+          <div class="pay-methods__grid">
+            <!-- MODE 1 : Virement Bancaire -->
+            <div class="pay-card reveal">
+              <div class="pay-card__header pay-card__header--blue">
+                <span class="pay-card__icon">🏦</span>
+                <h2>Virement Bancaire</h2>
+              </div>
+              <div class="pay-card__body">
+                <div class="pay-card__info">
+                  <div class="pay-card__row">
+                    <span class="pay-card__label">Banque</span>
+                    <span class="pay-card__value"
+                      >BICICI Abidjan, Côte d'Ivoire</span
+                    >
+                  </div>
+                  <div class="pay-card__row">
+                    <span class="pay-card__label">Titulaire</span>
+                    <span class="pay-card__value">ASI UMES</span>
+                  </div>
+                  <div class="pay-card__row">
+                    <span class="pay-card__label">N° de compte</span>
+                    <span class="pay-card__value pay-card__value--highlight"
+                      >011730360002</span
+                    >
+                  </div>
+                  <div class="pay-card__row">
+                    <span class="pay-card__label">Code banque</span>
+                    <span class="pay-card__value">CI006</span>
+                  </div>
+                  <div class="pay-card__row">
+                    <span class="pay-card__label">N° A UMES</span>
+                    <span class="pay-card__value">102140</span>
+                  </div>
+                </div>
+                <div class="pay-card__note">
+                  <strong>⚠️ Important :</strong> Après le virement, envoyez la
+                  preuve de paiement par WhatsApp au
+                  <strong>+228 99 25 13 58</strong> ou par email à
+                  <strong>contact@asi-umes.org</strong> en précisant votre nom
+                  complet.
+                </div>
+              </div>
+            </div>
+
+            <!-- MODE 2 : Orange Money -->
+            <div class="pay-card reveal">
+              <div class="pay-card__header pay-card__header--orange">
+                <span class="pay-card__icon">📱</span>
+                <h2>Orange Money</h2>
+              </div>
+              <div class="pay-card__body">
+                <div class="pay-card__info">
+                  <div class="pay-card__row">
+                    <span class="pay-card__label">Numéro</span>
+                    <span class="pay-card__value pay-card__value--highlight"
+                      >+225 07 08 23 18 61</span
+                    >
+                  </div>
+                  <div class="pay-card__row">
+                    <span class="pay-card__label">Nom du compte</span>
+                    <span class="pay-card__value">ASI UMES</span>
+                  </div>
+                </div>
+                <div class="pay-card__steps">
+                  <h4>Comment payer :</h4>
+                  <ol>
+                    <li>
+                      Composez le <strong>#144#</strong> sur votre téléphone
+                    </li>
+                    <li>Choisissez <strong>"Transfert d'argent"</strong></li>
+                    <li>
+                      Entrez le numéro : <strong>+225 07 08 23 18 61</strong>
+                    </li>
+                    <li>Entrez le montant à payer</li>
+                    <li>Confirmez avec votre code PIN</li>
+                  </ol>
+                </div>
+                <div class="pay-card__note">
+                  <strong>⚠️ Important :</strong> Après le transfert, envoyez la
+                  capture d'écran par WhatsApp au
+                  <strong>+228 99 25 13 58</strong> en précisant votre nom
+                  complet.
+                </div>
+              </div>
+            </div>
+
+            <!-- MODE 3 : CinetPay (bientôt) -->
+            <div class="pay-card pay-card--coming reveal">
+              <div class="pay-card__header pay-card__header--gold">
+                <span class="pay-card__icon">💻</span>
+                <h2>Paiement en ligne</h2>
+                <span class="pay-card__soon">Bientôt disponible</span>
+              </div>
+              <div class="pay-card__body">
+                <p class="pay-card__coming-text">
+                  Le paiement par carte bancaire et Mobile Money via
+                  <strong>CinetPay</strong> sera disponible très prochainement.
+                </p>
+                <p class="pay-card__coming-text">
+                  Vous pourrez payer directement depuis cette page en toute
+                  sécurité.
+                </p>
+                <button class="pay-card__btn-disabled" disabled>
+                  🔒 Paiement sécurisé (bientôt)
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================== -->
+      <!-- 4. CONTACT               -->
+      <!-- ======================== -->
+      <section class="pay-contact">
+        <div class="container">
+          <div class="pay-contact__card reveal">
+            <h3>❓ Besoin d'aide pour le paiement ?</h3>
+            <p>Contactez notre secrétariat :</p>
+            <div class="pay-contact__links">
+              <a
+                href="https://wa.me/22899251358"
+                target="_blank"
+                class="btn btn--whatsapp"
+              >
+                📱 WhatsApp : +228 99 25 13 58
+              </a>
+              <a
+                href="mailto:contact@asi-umes.org"
+                class="btn btn--outline-dark"
+              >
+                📧 contact@asi-umes.org
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <script src="../components/component-loader.js"></script>
+    <script src="paiement.js"></script>
+  </body>
+</html>

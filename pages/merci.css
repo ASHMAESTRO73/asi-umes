@@ -157,3 +157,56 @@
     width: 100%;
   }
 }
+
+/* Bouton PAYER */
+.merci-hero__pay {
+  margin: 32px auto 24px;
+  max-width: 420px;
+  text-align: center;
+}
+
+.merci-hero__pay-label {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.btn--pay {
+  display: inline-block;
+  background: linear-gradient(135deg, #b8860b, #daa520);
+  color: #ffffff !important;
+  font-size: 1.15rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px 48px;
+  border-radius: 16px;
+  text-decoration: none;
+  box-shadow: 0 6px 24px rgba(184, 134, 11, 0.35);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  animation: pulse-pay 2s ease-in-out infinite;
+}
+
+.btn--pay:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 36px rgba(184, 134, 11, 0.45);
+}
+
+@keyframes pulse-pay {
+  0%,
+  100% {
+    box-shadow: 0 6px 24px rgba(184, 134, 11, 0.35);
+  }
+  50% {
+    box-shadow: 0 6px 36px rgba(184, 134, 11, 0.55);
+  }
+}
+
+.merci-hero__pay-hint {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 12px;
+}

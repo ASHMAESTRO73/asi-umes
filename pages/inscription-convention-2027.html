@@ -17,13 +17,13 @@
 
     <main>
       <!-- ======================== -->
-      <!-- 1. BANNER DYNAMIQUE      -->
+      <!-- 1. HERO BANNER           -->
       <!-- ======================== -->
       <section class="insc-hero">
         <div class="insc-hero__bg">
           <img
             src="../assets/images/hotel1.jpg"
-            alt="Hôtel Prunel"
+            alt="Convention ASI UMES 2027"
             loading="eager"
           />
         </div>
@@ -63,7 +63,7 @@
       </section>
 
       <!-- ======================== -->
-      <!-- 2. INFOS + CARTES        -->
+      <!-- 2. CARTES INFOS          -->
       <!-- ======================== -->
       <section class="insc-infos">
         <div class="container">
@@ -82,8 +82,11 @@
             <div class="insc-card insc-card--gold reveal">
               <div class="insc-card__icon insc-card__icon--gold">💳</div>
               <h3>Frais de participation</h3>
-              <div class="insc-card__amount">45 000 FCFA</div>
-              <p>Équivalent : 68 € / 75 $ US</p>
+              <div class="insc-card__amounts">
+                <span class="insc-card__currency">45 000 FCFA</span>
+                <span class="insc-card__currency">68 EUR</span>
+                <span class="insc-card__currency">75 USD</span>
+              </div>
             </div>
 
             <!-- Carte 3 : Inclus -->
@@ -93,6 +96,7 @@
               <ul>
                 <li>• Accès complet aux conférences &amp; ateliers</li>
                 <li>• Kit du congressiste</li>
+                <li>• T-shirt officiel de la convention</li>
                 <li>• Déjeuners et pauses-café</li>
               </ul>
             </div>
@@ -123,52 +127,21 @@
               </p>
             </div>
 
-            <!-- Carte 6 : Visites Touristiques -->
+            <!-- Carte 6 : Activités après convention -->
             <div class="insc-card reveal">
               <div class="insc-card__icon insc-card__icon--blue">🌴</div>
-              <h3>Visites Touristiques</h3>
+              <h3>Activités après la Convention</h3>
               <p>Découvrez la Côte d'Ivoire ! Au choix :</p>
               <ul>
+                <li>• Visite de la ville d'<strong>Abidjan</strong></li>
                 <li>• Visite de la ville de <strong>San Pédro</strong></li>
                 <li>
-                  • Visite de <strong>Yamoussoukro</strong> (la Grande
-                  Basilique)
+                  • Visite de la Basilique de <strong>Yamoussoukro</strong>
                 </li>
               </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ======================== -->
-      <!-- 3. TARIFS HÉBERGEMENT    -->
-      <!-- ======================== -->
-      <section class="insc-lodging">
-        <div class="container">
-          <div class="insc-lodging__box reveal">
-            <div class="insc-lodging__header">
-              <h2>Tarifs d'hébergement (par nuitée)</h2>
-              <p>
-                Chambres disponibles à l'Hôtel Prunel et dans d'autres
-                structures partenaires à proximité.
+              <p class="insc-card__note">
+                * Prix à définir — choix multiples possibles
               </p>
-            </div>
-            <div class="insc-lodging__grid">
-              <div class="insc-lodging__item">
-                <p class="insc-lodging__type">Ventilée</p>
-                <p class="insc-lodging__price">7 000 – 8 000 F</p>
-                <p class="insc-lodging__unit">/ nuit</p>
-              </div>
-              <div class="insc-lodging__item insc-lodging__item--gold">
-                <p class="insc-lodging__type">Standard clim.</p>
-                <p class="insc-lodging__price">10 000 – 25 000 F</p>
-                <p class="insc-lodging__unit">/ nuit</p>
-              </div>
-              <div class="insc-lodging__item">
-                <p class="insc-lodging__type">Suite</p>
-                <p class="insc-lodging__price">35 000 – 60 000 F</p>
-                <p class="insc-lodging__unit">/ nuit</p>
-              </div>
             </div>
           </div>
         </div>
@@ -191,7 +164,12 @@
               action="../envoyer-inscription.php"
               method="POST"
             >
-              <!-- Identité -->
+              <!-- === SECTION 1 : IDENTITÉ === -->
+              <div class="insc-form__section-title insc-form__group--full">
+                <span class="insc-form__section-num">1</span>
+                Informations personnelles
+              </div>
+
               <div class="insc-form__group">
                 <label>Nom *</label>
                 <input
@@ -238,32 +216,9 @@
                 />
               </div>
               <div class="insc-form__group">
-                <label>Pays de provenance *</label>
-                <select name="pays" required>
-                  <option value="">Sélectionnez votre pays</option>
-                  <option>Bénin</option>
-                  <option>Burkina Faso</option>
-                  <option>Côte d'Ivoire</option>
-                  <option>Niger</option>
-                  <option>Togo</option>
-                  <option>Autre (Hors zone UMES)</option>
-                </select>
-              </div>
-              <div class="insc-form__group">
-                <label>Chapitre ASI UMES *</label>
-                <select name="chapitre" required>
-                  <option value="">Sélectionnez votre chapitre</option>
-                  <option>ASI Bénin</option>
-                  <option>ASI Burkina Faso</option>
-                  <option>ASI Côte d'Ivoire</option>
-                  <option>ASI Niger</option>
-                  <option>ASI Togo</option>
-                  <option>Je ne suis pas encore membre d'un chapitre</option>
-                </select>
-              </div>
-              <div class="insc-form__group">
                 <label>Statut *</label>
-                <select name="statut" required>
+                <select name="statut" id="inscStatut" required>
+                  <option value="">Sélectionnez votre statut</option>
                   <option value="Membre ASI">Membre ASI</option>
                   <option value="Invité">Invité</option>
                   <option value="Visiteur">Visiteur</option>
@@ -271,21 +226,59 @@
                 </select>
               </div>
 
+              <!-- Chapitre (si Membre ASI) -->
+              <div
+                class="insc-form__group insc-form__group--full insc-chapitre-group"
+                id="chapitreGroup"
+                style="display: none"
+              >
+                <label>Chapitre ASI UMES *</label>
+                <select name="chapitre" id="inscChapitre">
+                  <option value="">Sélectionnez votre chapitre</option>
+                  <option value="ASI Bénin">ASI Bénin</option>
+                  <option value="ASI Burkina Faso">ASI Burkina Faso</option>
+                  <option value="ASI Côte d'Ivoire">ASI Côte d'Ivoire</option>
+                  <option value="ASI Niger">ASI Niger</option>
+                  <option value="ASI Togo">ASI Togo</option>
+                </select>
+              </div>
+
+              <!-- Pays (si NON Membre ASI) -->
+              <div
+                class="insc-form__group insc-form__group--full insc-pays-group"
+                id="paysGroup"
+                style="display: none"
+              >
+                <label>Pays de provenance *</label>
+                <input
+                  type="text"
+                  name="pays"
+                  id="inscPays"
+                  placeholder="Ex: France, Cameroun, Sénégal..."
+                />
+              </div>
+
               <!-- Alimentation -->
               <div class="insc-form__group insc-form__group--full">
-                <label>Option d'alimentation *</label>
+                <label>Régime alimentaire *</label>
                 <select name="alimentation" required>
                   <option value="">
                     Sélectionnez votre régime alimentaire
                   </option>
-                  <option value="standard">Alimentation standard</option>
-                  <option value="vegetarien">Végétarien</option>
-                  <option value="vegan">Végétalien (vegan)</option>
-                  <option value="sans-gluten">Sans gluten</option>
-                  <option value="autre">
+                  <option value="Standard">Alimentation standard</option>
+                  <option value="Végétarien">Végétarien</option>
+                  <option value="Végétalien (vegan)">Végétalien (vegan)</option>
+                  <option value="Sans gluten">Sans gluten</option>
+                  <option value="Autre">
                     Autre régime (à préciser au secrétariat)
                   </option>
                 </select>
+              </div>
+
+              <!-- === SECTION 2 : LOGISTIQUE === -->
+              <div class="insc-form__section-title insc-form__group--full">
+                <span class="insc-form__section-num">2</span>
+                Hébergement &amp; T-shirt
               </div>
 
               <!-- Hébergement -->
@@ -293,42 +286,143 @@
                 class="insc-form__group insc-form__group--full insc-form__group--highlight"
               >
                 <label
-                  >🛏️ Option d'Hébergement souhaitée à l'Hôtel Prunel *</label
+                  >🛏️ Hébergement souhaité *
+                  <small>(3 nuitées : 14, 15 &amp; 16 Mai)</small></label
                 >
-                <select name="hebergement" required>
-                  <option value="">
-                    Sélectionnez une catégorie de chambre
+                <select
+                  name="hebergement"
+                  id="inscHebergement"
+                  required
+                  data-calc="hebergement"
+                >
+                  <option value="" data-price="0">
+                    Sélectionnez une chambre
                   </option>
-                  <option value="ventilée">
-                    Chambre Ventilée (7 000 – 8 000 FCFA / nuit)
-                  </option>
-                  <option value="climatisée">
-                    Chambre Standard Climatisée (10 000 – 25 000 FCFA / nuit)
-                  </option>
-                  <option value="suite">
-                    Suite Luxueuse (35 000 – 60 000 FCFA / nuit)
-                  </option>
-                  <option value="autonome">
-                    Je gère mon propre hébergement à l'extérieur
-                  </option>
+                  <optgroup label="⭐ HOTEL PRUNELLE (site de la Convention)">
+                    <option
+                      value="PRUNELLE - Standard 25 000 F"
+                      data-price="25000"
+                    >
+                      Standard — 25 000 FCFA / nuit (au lieu de 35 000)
+                    </option>
+                    <option
+                      value="PRUNELLE - Mini Suite 35 000 F"
+                      data-price="35000"
+                    >
+                      Mini Suite — 35 000 FCFA / nuit (au lieu de 50 000)
+                    </option>
+                    <option
+                      value="PRUNELLE - Suite 2 pièces 100 000 F"
+                      data-price="100000"
+                    >
+                      Suite 2 pièces — 100 000 FCFA / nuit (au lieu de 125 000)
+                    </option>
+                    <option
+                      value="PRUNELLE - Suite 3 pièces 150 000 F"
+                      data-price="150000"
+                    >
+                      Suite 3 pièces — 150 000 FCFA / nuit (au lieu de 180 000)
+                    </option>
+                  </optgroup>
+                  <optgroup label="🏨 HOTEL PERFECT (100 m du site)">
+                    <option
+                      value="PERFECT - Standard 15 000 F"
+                      data-price="15000"
+                    >
+                      Standard — 15 000 FCFA / nuit
+                    </option>
+                    <option
+                      value="PERFECT - Confort 20 000 F"
+                      data-price="20000"
+                    >
+                      Confort — 20 000 FCFA / nuit
+                    </option>
+                    <option
+                      value="PERFECT - Premium 25 000 F"
+                      data-price="25000"
+                    >
+                      Premium — 25 000 FCFA / nuit
+                    </option>
+                  </optgroup>
+                  <optgroup label="🏖️ HOTEL ERO PLAGE (1,3 km du site)">
+                    <option
+                      value="ERO PLAGE - Ventilée 6 000 F"
+                      data-price="6000"
+                    >
+                      Ventilée — 6 000 FCFA / nuit
+                    </option>
+                    <option
+                      value="ERO PLAGE - Ventilée 7 000 F"
+                      data-price="7000"
+                    >
+                      Ventilée — 7 000 FCFA / nuit
+                    </option>
+                    <option
+                      value="ERO PLAGE - Ventilée 10 000 F"
+                      data-price="10000"
+                    >
+                      Ventilée — 10 000 FCFA / nuit
+                    </option>
+                    <option
+                      value="ERO PLAGE - Climatisée 15 000 F"
+                      data-price="15000"
+                    >
+                      Climatisée — 15 000 FCFA / nuit
+                    </option>
+                  </optgroup>
+                  <optgroup label="🌊 LAC HOTEL (1,2 km du site)">
+                    <option
+                      value="LAC HOTEL - Climatisée 15 000 F"
+                      data-price="15000"
+                    >
+                      Climatisée — 15 000 FCFA / nuit
+                    </option>
+                  </optgroup>
+                  <optgroup label="Autre">
+                    <option value="Autonome (hébergement libre)" data-price="0">
+                      Je gère mon propre hébergement
+                    </option>
+                  </optgroup>
                 </select>
-                <p class="insc-form__hint">
-                  Le choix définitif du numéro de chambre et le règlement se
-                  feront lors de la confirmation avec le secrétariat.
-                </p>
               </div>
 
-              <!-- Options supplémentaires -->
+              <!-- T-shirt -->
+              <div class="insc-form__group insc-form__group--full">
+                <label
+                  >👕 Taille de T-shirt *
+                  <small>(inclus dans les frais)</small></label
+                >
+                <select name="tshirt" required>
+                  <option value="">Sélectionnez votre taille</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="XXL">XXL</option>
+                  <option value="XXXL">XXXL</option>
+                  <option value="Extra large">
+                    Extra large (à préciser au secrétariat)
+                  </option>
+                </select>
+              </div>
+
+              <!-- === SECTION 3 : OPTIONS === -->
+              <div class="insc-form__section-title insc-form__group--full">
+                <span class="insc-form__section-num">3</span>
+                Options supplémentaires (facultatives)
+              </div>
+
               <div
                 class="insc-form__group insc-form__group--full insc-form__group--options"
               >
-                <label>🎯 Options supplémentaires (facultatives)</label>
+                <label>🎯 Options payantes</label>
                 <div class="insc-options">
                   <label class="insc-option">
                     <input
                       type="checkbox"
                       name="options[]"
                       value="Stand Expo (30 000 FCFA)"
+                      data-price="30000"
+                      data-calc="option"
                     />
                     <span class="insc-option__text">
                       <strong>🎪 Stand d'Exposition</strong> — 30 000 FCFA<br />
@@ -343,6 +437,8 @@
                       type="checkbox"
                       name="options[]"
                       value="Promo Express 3 min (50 000 FCFA)"
+                      data-price="50000"
+                      data-calc="option"
                     />
                     <span class="insc-option__text">
                       <strong>🎤 Promotion Express</strong> — 50 000 FCFA<br />
@@ -352,31 +448,137 @@
                       >
                     </span>
                   </label>
+                </div>
+              </div>
+
+              <div
+                class="insc-form__group insc-form__group--full insc-form__group--options"
+              >
+                <label
+                  >🌴 Activités après la Convention
+                  <small>(prix à définir)</small></label
+                >
+                <div class="insc-options">
                   <label class="insc-option">
                     <input
                       type="checkbox"
                       name="options[]"
-                      value="Visite villes côtières"
+                      value="Visite Abidjan"
+                      data-price="0"
+                      data-calc="option"
                     />
                     <span class="insc-option__text">
-                      <strong>🌴 Visite des villes côtières</strong><br />
-                      <small
-                        >Découvrez les villes côtières de la Côte
-                        d'Ivoire</small
-                      >
+                      <strong>🏙️ Visite de la ville d'Abidjan</strong><br />
+                      <small>Prix à définir</small>
                     </span>
                   </label>
                   <label class="insc-option">
                     <input
                       type="checkbox"
                       name="options[]"
-                      value="Visite Yamoussoukro"
+                      value="Visite San Pédro"
+                      data-price="0"
+                      data-calc="option"
                     />
                     <span class="insc-option__text">
-                      <strong>⛪ Visite de Yamoussoukro</strong><br />
-                      <small>La Grande Basilique Notre-Dame de la Paix</small>
+                      <strong>🌴 Visite de la ville de San Pédro</strong><br />
+                      <small>Prix à définir</small>
                     </span>
                   </label>
+                  <label class="insc-option">
+                    <input
+                      type="checkbox"
+                      name="options[]"
+                      value="Visite Basilique Yamoussoukro"
+                      data-price="0"
+                      data-calc="option"
+                    />
+                    <span class="insc-option__text">
+                      <strong>⛪ Visite de la Basilique de Yamoussoukro</strong
+                      ><br />
+                      <small>Prix à définir</small>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- === INFO PAIEMENT === -->
+              <div
+                class="insc-form__group insc-form__group--full insc-payment-info"
+              >
+                <div class="insc-payment-info__icon">💳</div>
+                <div class="insc-payment-info__text">
+                  <strong>Modalités de paiement</strong>
+                  <p>
+                    Pour valider votre participation, vous devez verser
+                    <strong>les frais d'inscription (45 000 FCFA)</strong>
+                    ainsi que
+                    <strong
+                      >le montant de la première nuitée d'hébergement</strong
+                    >
+                    choisi.
+                  </p>
+                  <p>
+                    Le reste des frais d'hébergement devra être versé
+                    <strong
+                      >2 semaines avant la date de début de la
+                      convention</strong
+                    >
+                    (soit avant le 30 Avril 2027).
+                  </p>
+                </div>
+              </div>
+
+              <!-- Récapitulatif final avant soumission -->
+              <div
+                class="insc-form__group insc-form__group--full insc-final-recap"
+              >
+                <div class="insc-final-recap__header">
+                  <span class="insc-final-recap__icon">💰</span>
+                  <h3>Récapitulatif de votre inscription</h3>
+                </div>
+                <div class="insc-final-recap__lines">
+                  <div class="insc-final-recap__line">
+                    <span>Frais d'inscription</span>
+                    <strong>45 000 F</strong>
+                  </div>
+                  <div
+                    class="insc-final-recap__line"
+                    id="finalHebergement"
+                    style="display: none"
+                  >
+                    <span>Hébergement <small>(3 nuits)</small></span>
+                    <strong id="finalHebergementVal">0 F</strong>
+                  </div>
+                  <div
+                    class="insc-final-recap__line"
+                    id="finalOptions"
+                    style="display: none"
+                  >
+                    <span>Options supplémentaires</span>
+                    <strong id="finalOptionsVal">0 F</strong>
+                  </div>
+                </div>
+                <div class="insc-final-recap__total">
+                  <span>TOTAL</span>
+                  <strong id="finalTotal">45 000 F</strong>
+                </div>
+                <div class="insc-final-recap__pay">
+                  <div
+                    class="insc-final-recap__pay-block insc-final-recap__pay-block--gold"
+                  >
+                    <span>💳 À payer maintenant</span>
+                    <strong id="finalPayNow">45 000 F</strong>
+                    <small>Inscription + 1ère nuitée d'hébergement</small>
+                  </div>
+                  <div class="insc-final-recap__pay-block">
+                    <span>📅 Reste à payer</span>
+                    <strong id="finalPayLater">0 F</strong>
+                    <small
+                      >Avant le 30 Avril 2027 (2 semaines avant la
+                      convention)</small
+                    >
+                  </div>
                 </div>
               </div>
 
@@ -395,30 +597,10 @@
               <!-- Submit -->
               <div class="insc-form__group insc-form__group--full">
                 <button type="submit" class="insc-form__submit">
-                  CONFIRMER MON INSCRIPTION
+                  ✅ CONFIRMER MON INSCRIPTION
                 </button>
               </div>
             </form>
-          </div>
-        </div>
-      </section>
-
-      <!-- ======================== -->
-      <!-- 5. ÉCRAN CONFIRMATION    -->
-      <!-- ======================== -->
-      <section class="insc-success" id="inscSuccess" style="display: none">
-        <div class="container">
-          <div class="insc-success__card">
-            <div class="insc-success__icon">✅</div>
-            <h1>Inscription Reçue !</h1>
-            <p>
-              Merci pour votre pré-inscription à la Convention ASI UMES 2027. Un
-              e-mail de confirmation contenant les détails de votre réservation
-              et les modalités de paiement vous a été envoyé.
-            </p>
-            <button id="backToForm" class="btn btn--blue btn--lg">
-              Retour au formulaire
-            </button>
           </div>
         </div>
       </section>

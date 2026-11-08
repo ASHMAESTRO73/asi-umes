@@ -101,3 +101,102 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 });
+
+/* ============================================
+   GOOGLE TRANSLATE — TOGGLE FR / ANG
+   ============================================ */
+(function () {
+  window.googleTranslateElementInit = function () {
+    new google.translate.TranslateElement(
+      { pageLanguage: "fr", includedLanguages: "fr,en", autoDisplay: false },
+      "google_translate_element",
+    );
+  };
+
+  var c = document.createElement("div");
+  c.id = "google_translate_element";
+  c.style.display = "none";
+  document.body.appendChild(c);
+
+  var s = document.createElement("script");
+  s.src =
+    "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+  document.head.appendChild(s);
+
+  function getLang() {
+    return document.cookie.indexOf("googtrans=/fr/en") !== -1 ? "en" : "fr";
+  }
+
+  function init() {
+    var actions = document.querySelector(".header__actions");
+    if (!actions || actions.querySelector(".lang-toggle")) return;
+
+    var donBtn = actions.querySelector(".btn--gold");
+    if (!donBtn) return;
+
+    /* Wrapper vertical : bouton don + toggle */
+    var col = document.createElement("div");
+    col.className = "header__cta-col";
+    actions.insertBefore(col, donBtn);
+    col.appendChild(donBtn);
+
+    /* Toggle avec VRAIES images de drapeaux */
+    var btn = document.createElement("div");
+    btn.className = "lang-toggle";
+    col.appendChild(btn);
+
+    function update() {
+      if (getLang() === "en") {
+        btn.innerHTML =
+          '<span class="lang-toggle__label">Langues</span><img src="https://flagcdn.com/24x18/fr.png" alt="FR" width="20" height="15"><span class="lang-toggle__label">FR</span>';
+        btn.title = "Passer en fran\u00e7ais";
+      } else {
+        btn.innerHTML =
+          '<span class="lang-toggle__label">Langues</span><img src="https://flagcdn.com/24x18/gb.png" alt="ANG" width="20" height="15"><span class="lang-toggle__label">ANG</span>';
+        btn.title = "Switch to English";
+      }
+    }
+
+    update();
+
+    btn.addEventListener("click", function () {
+      if (getLang() === "fr") {
+        document.cookie = "googtrans=/fr/en;path=/";
+      } else {
+        document.cookie =
+          "googtrans=;path=/;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        document.cookie =
+          "googtrans=;path=/;domain=" +
+          location.hostname +
+          ";expires=Thu, 01 Jan 1970 00:00:00 GMT";
+      }
+      location.reload();
+    });
+  }
+
+  /* Supprimer la barre Google Translate dès qu'elle apparaît */
+  function killBanner() {
+    var banner = document.querySelector(".goog-te-banner-frame");
+    if (banner) banner.style.display = "none";
+    document.body.style.top = "0";
+  }
+
+  var observer = new MutationObserver(function () {
+    killBanner();
+  });
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+  });
+
+  setInterval(killBanner, 2000);
+
+  if (document.readyState === "complete") {
+    setTimeout(init, 500);
+  } else {
+    window.addEventListener("load", function () {
+      setTimeout(init, 500);
+    });
+  }
+})();
